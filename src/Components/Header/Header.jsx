@@ -2,7 +2,7 @@ import { Nav } from "../Nav/Nav"
 
 export const Header = () => {
     return (
-        <header>
+        <header className="w-full p-4">
             <Nav />
         </header>
     )

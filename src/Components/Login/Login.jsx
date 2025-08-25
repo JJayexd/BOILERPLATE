@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useAuth } from "../../Context/AuthProvider";
+import { useAuth } from "../../Providers/AuthProvider";
 
 export const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -16,8 +16,6 @@ export const Login = () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
             });
-
-            // console.log(response);
 
             if (!response.ok) {
                 toastr.error(Error, 'Login fejlet');

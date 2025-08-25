@@ -6,9 +6,9 @@ export const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const navItems = [
-        { name: "Home", path: "/" },
-        { name: "About", path: "/about" },
-        { name: "Contact", path: "/contact" },
+        { name: "Hjem", path: "/" },
+        { name: "Om", path: "/om" },
+        { name: "Kontakt", path: "/kontakt" },
         { name: "Login", path: "/login" }
     ]
 
@@ -49,8 +49,8 @@ export const Nav = () => {
 
             {/** Nav for Mobil */}
             {isOpen && (
-                <div className="">
-                    <ul className="md:hidden">
+                <div className="absolute top-10">
+                    <ul className="md:hidden flex flex-col items-left w-screen">
                     {navItems.map((item) => (
                         <li key={item.path}>
                         <NavLink
